@@ -1,0 +1,23 @@
+.CartButton {
+    font-weight: 300;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #404759;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+  }
+  
+  .CartButton:hover {
+    background-color: #303349;
+    transform: scale(1.05);
+  }
+  
+  .CartButton:active {
+    background-color: #202129;
+    transform: scale(1);
+  }
+  
