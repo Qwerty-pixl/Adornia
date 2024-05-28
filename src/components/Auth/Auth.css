@@ -1,24 +1,60 @@
-.Auth button {
-  cursor: pointer;
-  font-family: "Poppins", sans-serif;
-  padding: 10px 15px;
-  border-radius: 10px;
-  border: 1px white solid;
-  background-color: rgb(47, 45, 45);
-  color: white;
-  transition: 0.3s;
+@import url('https://fonts.googleapis.com/css2?family=Freehand&family=Indie+Flower&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rokkitt:ital,wght@0,100..900;1,100..900&family=Special+Elite&display=swap');
+.Auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
-.Auth button:hover {
-  background-color: white;
-  color: rgb(47, 45, 45);
-  transition: 0.3s;
-}
-.Auth .photoURL {
-  margin: 10px;
-  border-radius: 100%;
-  width: 30px;
-}
-.Auth span {
+
+.UserAuth, .GuestAuth {
   display: flex;
   align-items: center;
+  gap: 10px;
+}
+
+.photoURL {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #404759;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photoURL:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.Sign {
+  padding: 8px 16px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #404759;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: "Rokkitt", serif;
+}
+
+.SignIn:hover, .SignOut:hover {
+  background-color: #303349;
+  transform: scale(1.05);
+}
+
+.SignIn:active, .SignOut:active {
+  background-color: #202129;
+  transform: scale(1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .Auth {
+    flex-direction: column;
+  }
+  
+  .UserAuth, .GuestAuth {
+    flex-direction: column;
+    gap: 5px;
+  }
 }
