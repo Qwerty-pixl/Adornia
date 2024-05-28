@@ -1,51 +1,62 @@
-.Nav{
-  width: 60%;
-  padding: 1.5rem;
-  display: flex;
-}
-.Nav .NavItem a {
-  color: white;
-  font-weight: 500;
-  text-decoration: none;
-  padding: 10px 20px;
+/* Base styles */
+.Nav {
+  background-color: #d6e5fb;
+  padding: 1rem;
 }
 
 .Nav ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  display: flex;
   list-style: none;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
 }
 
+.NavItem {
+  position: relative;
+}
 
-@media (max-width: 550px) {
+.NavItem a {
+  color: #404759;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+}
+
+.NavItem a:hover {
+  color: #ffffff;
+
+  transform: scale(1.05);
+}
+
+.NavItem a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  transition: width 0.3s;
+  margin-top: 5px;
+}
+
+.NavItem a:hover::after {
+  width: 100%;
+}
+
+.NavItem a.active {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
   .Nav ul {
     flex-direction: column;
-    margin: 1rem 0;
+    align-items: center;
   }
-}
 
-.Nav .NavItem a {
-  color: white;
-  display: inline-block;
-  line-height: 1;
-  text-decoration: none; 
-}
-.NavItem a:after {
-  background-color: white;
-  display: block;
-  content: "";
-  height: 2px; 
-  width: 0%;
-  -webkit-transition: width 0.3s ease-in-out;
-  -moz--transition: width 0.3s ease-in-out;
-  transition: width 0.3s ease-in-out;
-}
-.NavItem a:hover:after,
-  .NavItem a:focus:after {
-    width: 100%;
+  .NavItem {
+    margin: 0.5rem 0;
   }
+}
