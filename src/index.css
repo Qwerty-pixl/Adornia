@@ -202,9 +202,6 @@
 }
 
 .about-us-content article  p h2{
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -423,4 +420,53 @@
   font-size: 18px;
   color: #666;
   margin-top: 20px; /* Add margin for spacing */
+}
+
+
+
+
+
+
+
+
+
+
+
+.add-category-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-category-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 300px;
+}
+
+.add-category-input::placeholder {
+  color: #999;
+}
+
+.add-category-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-category-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.add-category-button:hover {
+  background-color: #0056b3;
 }
