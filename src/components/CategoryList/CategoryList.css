@@ -1,5 +1,6 @@
 .CategoryList ul {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
 }
 
@@ -16,7 +17,8 @@
   border-radius: 10px;
   padding: 1rem 6rem; 
   text-decoration: none;
-  color: white;
+  color: #404759;
+  border-color: #404759;
   transition: 0.3s;
 }
 
