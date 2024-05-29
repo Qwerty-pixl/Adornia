@@ -8,7 +8,15 @@ import "./CategoryList.css";
 export default function CategoryList() {
   const { categories } = useContext(AppContext);
 
-  const output = categories.map((category) => (
+  // Reorder categories array to ensure "All" category is first
+  const sortedCategories = [
+    // Find the "All" category and place it first
+    categories.find(category => category.name.toLowerCase() === "all"),
+    // Filter out the "All" category from the rest
+    ...categories.filter(category => category.name.toLowerCase() !== "all")
+  ].filter(Boolean); // Remove any undefined values
+
+  const output = sortedCategories.map((category) => (
     <li key={category.id}>
       <NavLink to={`/categories/${category.slug}`}>
         {category.name}
