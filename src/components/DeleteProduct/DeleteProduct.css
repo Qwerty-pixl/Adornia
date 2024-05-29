@@ -1,0 +1,35 @@
+/* DeleteProduct.css */
+
+.DeleteProduct {
+    background-color: #7790A6; /* Red color for delete action */
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .DeleteProduct:hover {
+    background-color: #5C758D; /* Darker red on hover */
+  }
+  
+  .DeleteProduct:active {
+    background-color: #5C758D; /* Even darker red on click */
+  }
+  
+  .DeleteProduct:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 77, 77, 0.5); /* Focus outline for accessibility */
+  }
+  
+  .DeleteProduct .minus {
+    font-size: 1.5rem; /* Larger font size for the minus sign */
+    font-weight: bold;
+    line-height: 1;
+  }
+  
