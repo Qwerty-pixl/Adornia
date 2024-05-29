@@ -1,0 +1,54 @@
+.AddProduct {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #DCE8F2;
+    border-radius: 8px;
+  }
+  
+  .AddProduct form {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .AddProduct h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+  }
+  
+  .AddProduct label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .AddProduct input[type="text"],
+  .AddProduct input[type="number"],
+  .AddProduct input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #7790A6;
+    border-radius: 5px;
+  }
+  
+  .AddProduct button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #7790A6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .AddProduct button:hover {
+    background-color: #617283;
+  }
+  
+  .AddProduct button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
