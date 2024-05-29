@@ -1,0 +1,37 @@
+.AddCategory {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #DCE8F2;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .category-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #7790A6;
+    border-radius: 5px;
+  }
+  
+  .category-button {
+    padding: 10px;
+    background-color: #7790A6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .category-button:hover {
+    background-color: #5C758D;
+  }
+  
+  .category-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
