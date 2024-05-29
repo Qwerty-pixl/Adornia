@@ -7,9 +7,8 @@ import Footer from "../Footer/Footer";
 import Logo from "../Logo/Logo";
 import Nav from "../Nav/Nav";
 import NavToggle from "../NavToggle/NavToggle";
+import Search from "../Search/Search"; // Импорт компонента Search
 import "./Layout.css";
-
-
 
 export default function Layout(props) {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -17,6 +16,7 @@ export default function Layout(props) {
   function toggleDrawer() {
     setDrawerOpen(!drawerOpen);
   }
+
   return (
     <div className="Layout">
       <header>
@@ -28,6 +28,7 @@ export default function Layout(props) {
           <CartLink />
           <Auth />
         </div>
+        <Search /> {/* Встроенный поиск */}
       </header>
       <aside>
         <CategoryList />
