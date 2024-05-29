@@ -3,6 +3,7 @@ import { AppContext } from "../../App";
 import { deleteDoc, doc } from "firebase/firestore";
 import { deleteObject, ref } from "firebase/storage";
 import { db, storage } from "../../firebase";
+import "./DeleteProduct.css";
 
 export default function DeleteProduct({ product }) {
   const { user } = useContext(AppContext);
@@ -28,7 +29,7 @@ export default function DeleteProduct({ product }) {
 
   return (
     <button className="DeleteProduct" onClick={onDeleteClick}>
-      -
+      <span className="minus">-</span>
     </button>
   );
 }
