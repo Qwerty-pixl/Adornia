@@ -26,7 +26,20 @@ const Contact = () => {
         inquiries, please feel free to reach out to us.
       </p>
       <div className="contact-details">
-        {/* Contact details */}
+        <p>
+          <strong>Address:</strong> 1234 Street Name, City, State, 56789
+        </p>
+        <p>
+          <strong>Phone:</strong> (123) 456-7890
+        </p>
+        <p>
+          <strong>Email:</strong> contact@example.com
+        </p>
+        <div className="social-media">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="social-link">Facebook</a>
+          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="social-link">Twitter</a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
+        </div>
       </div>
       <h3 className="contact-subheading">Send us a message</h3>
       <form className="contact-form" onSubmit={handleSubmit}>
@@ -62,7 +75,7 @@ const Contact = () => {
             required
           />
         </div>
-        <button type="submit">Send Message</button>
+        <button type="submit" className="submit-button">Send Message</button>
       </form>
     </div>
   );
