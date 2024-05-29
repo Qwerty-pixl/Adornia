@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import jobbber1 from '../assets/obber.jpg'
+import jobbber2 from '../assets/joobber2.jpg'
+
+import jobbber3 from '../assets/jobber3.jpg'
+
 
 const AboutUs = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -57,9 +62,9 @@ const AboutUs = () => {
         <h2>Frequently Asked Questions</h2>
         <div className="accordion">
           {[
-            { question: 'What products do you offer?', answer: 'We offer a wide range of athletic apparel, footwear, and accessories for all your sports needs.' },
-            { question: 'How can I contact customer service?', answer: 'You can contact our customer service through our website\'s contact form or by calling our support line.' },
-            { question: 'Do you offer international shipping?', answer: 'Yes, we offer international shipping to many countries. Please check our shipping policy for more details.' },
+            { question: 'What products do you offer?', answer: 'In our jewelry store, we offer a wide range of unique and exquisite pieces that reflect high levels of craftsmanship and individual style. Our collection includes diverse adornments crafted using the finest materials, including precious and semi-precious gemstones, gold, silver, and platinum. We provide exclusive rings, necklaces, bracelets, earrings, and more, each piece of which is a unique work of art. Our designers carefully track the latest trends in the world of fashion and jewelry art to offer you only the most stylish and relevant accessories.' },
+            { question: 'How can I contact customer service?', answer: 'In our jewelry store, we offer a wide range of unique and exquisite pieces that reflect high levels of craftsmanship and individual style. Our collection includes diverse adornments crafted using the finest materials, including precious and semi-precious gemstones, gold, silver, and platinum. We provide exclusive rings, necklaces, bracelets, earrings, and more, each piece of which is a unique work of art. Our designers carefully track the latest trends in the world of fashion and jewelry art to offer you only the most stylish and relevant accessories.' },
+            { question: 'Do you offer international shipping?', answer: 'In our jewelry store, we offer a wide range of unique and exquisite pieces that reflect high levels of craftsmanship and individual style. Our collection includes diverse adornments crafted using the finest materials, including precious and semi-precious gemstones, gold, silver, and platinum. We provide exclusive rings, necklaces, bracelets, earrings, and more, each piece of which is a unique work of art. Our designers carefully track the latest trends in the world of fashion and jewelry art to offer you only the most stylish and relevant accessories.' },
           ].map((item, index) => (
             <div key={index} className="accordion-item">
               <button
@@ -80,18 +85,18 @@ const AboutUs = () => {
         <h2>Our Team</h2>
         <div className="cards-container">
           <div className="card">
-            <img src="https://via.placeholder.com/300x200" alt="Team Member" />
-            <h3>Jane Doe</h3>
+            <img src={jobbber1} alt="Team Member" />
+            <h3>Nasty Alekseevna</h3>
             <p>CEO</p>
           </div>
           <div className="card">
-            <img src="https://via.placeholder.com/300x200" alt="Team Member" />
-            <h3>John Smith</h3>
+            <img src={jobbber2} alt="Team Member" />
+            <h3>Marya Eduardovna</h3>
             <p>Head of Design</p>
           </div>
           <div className="card">
-            <img src="https://via.placeholder.com/300x200" alt="Team Member" />
-            <h3>Emily Johnson</h3>
+            <img src={jobbber3} alt="Team Member" />
+            <h3>Emilya Ivanovna</h3>
             <p>Marketing Director</p>
           </div>
         </div>
