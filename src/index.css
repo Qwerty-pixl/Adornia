@@ -567,3 +567,22 @@
   .add-category-button:hover {
     background-color: #0056b3;
   }
+
+
+
+
+  .product-item h2{
+    color: #404759;  }
+
+  .product-item p{    color: #404759;  }
+
+
+  a{
+    text-decoration: none!important;
+  }
+
+
+
+  .Contacts_map{
+    margin: 40px;
+  }
