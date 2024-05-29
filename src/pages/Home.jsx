@@ -10,7 +10,7 @@ export default function Home() {
     'https://wallpapers.com/images/hd/jewelry-necklace-with-blue-diamonds-aurtannkux9ky5nu.jpg',
     'https://i.pinimg.com/originals/68/9c/33/689c33d888e1182e62a288bc8a83cf67.jpg',
   ];
-  
+
   return (
     <>
       <div className="Home">
@@ -37,8 +37,8 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <Slider slides={slides} />      
-        </div>
+        <Slider slides={slides} />
+      </div>
     </>
   );
 }
