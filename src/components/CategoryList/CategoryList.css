@@ -1,64 +1,78 @@
+.CategoryList {
+  padding: 20px;
+  background-color: #DCE8F2;
+  border-radius: 8px;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: auto; /* Allows horizontal scrolling if items overflow */
+  white-space: nowrap; /* Prevents items from wrapping to the next line */
+}
+
 .CategoryList ul {
   display: flex;
-  flex-wrap: wrap;
+  list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 .CategoryList li {
-  font-size: 17px;
-  list-style: none;
-  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  padding: 10px 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  flex: 0 0 auto; /* Prevents flex items from growing or shrinking */
 }
 
-.CategoryList li a {
-  cursor: pointer;
-  font-weight: 500;
-  border: 1px solid white; 
-  border-radius: 10px;
-  padding: 1rem 6rem; 
+.CategoryList li:last-child {
+  margin-right: 0;
+}
+
+.CategoryList a {
   text-decoration: none;
-  color: #404759;
-  border-color: #404759;
-  transition: 0.3s;
+  color: #7790A6;
+  font-weight: bold;
+  margin-right: 10px;
 }
 
-.CategoryList li a:hover {
-  transition: 0.3s;
-  color: rgb(47, 45, 45);
-  background-color: white;
+.CategoryList a:hover {
+  color: #5C758D;
 }
 
-@media (max-width: 1200px) {
+.AddCategoryWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+  .CategoryList ul {
+    flex-direction: column; /* Stacks items vertically */
+    white-space: normal; /* Allows wrapping */
+  }
+
   .CategoryList li {
-    font-size: 17px;
-    padding: 2rem 1rem;
+    margin-right: 0;
+    margin-bottom: 10px; /* Adds space between items */
+    flex: 1 1 auto; /* Allows flex items to grow and shrink */
   }
 
-  .CategoryList li a {
-    padding: 1rem 4rem; 
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 980px) {
-  .CategoryList li {
-    font-size: 14px;
-    padding: 2rem 1rem;
-  }
-
-  .CategoryList li a {
-    padding: 1rem 3rem; 
-    font-size: 14px;
+  .AddCategoryWrapper {
+    margin-top: 10px;
   }
 }
 
-@media (max-width: 768px) {
-  .CategoryList li {
-    padding: 10px;
+/* Media query for medium screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .CategoryList ul {
+    flex-wrap: wrap; /* Wraps items to new lines */
   }
 
-  .CategoryList li a {
-    padding: 10px 12px;
-    font-size: 14px;
+  .CategoryList li {
+    flex: 1 1 45%; /* Flex-basis adjusts to fit two items per row */
+    margin-bottom: 10px;
   }
 }
