@@ -1,11 +1,11 @@
-  import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../App";
 import "./CartList.css";
 
 export default function CartList() {
-  //получить список товаров и корзинку
   const { products, cart, setCart } = useContext(AppContext);
+  const [zoomedImage, setZoomedImage] = useState(null);
 
   function onQuantityChange(product, qty) {
     setCart({
@@ -13,22 +13,25 @@ export default function CartList() {
       [product.id]: qty,
     });
   }
+
   function onItemRemove(product) {
     const newCart = { ...cart };
     delete newCart[product.id];
     setCart(newCart);
   }
 
-  //
   const productIds = Object.keys(cart);
 
   const output = products
     .filter((product) => productIds.includes(product.id))
     .map((product) => (
       <div className="CartItem" key={product.id}>
-        <img src={product.picture} alt={product.name} />
+        <img
+          src={product.picture}
+          alt={product.name}
+          onClick={() => setZoomedImage(product.picture)}
+        />
         <Link to={"/product/" + product.slug}>{product.name}</Link>
-        {cart[product.id]}
         <input
           type="number"
           value={cart[product.id]}
@@ -51,5 +54,14 @@ export default function CartList() {
       </div>
     ));
 
-  return <div className="CartList">{output}</div>;
+  return (
+    <div className="CartList">
+      {output}
+      {zoomedImage && (
+        <div className="ZoomedImageOverlay" onClick={() => setZoomedImage(null)}>
+          <img src={zoomedImage} alt="ZoomedImage" />
+        </div>
+      )}
+    </div>
+  );
 }
